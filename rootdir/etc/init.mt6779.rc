@@ -1236,21 +1236,6 @@ service loghidlsysservice /system/bin/loghidlsysservice
     group system
     disabled
 
-# add meta_tst for ATM
-service meta_tst /vendor/bin/meta_tst
-    class main
-    user radio gps system wifi
-    group radio gps system wifi audio bluetooth media
-    disabled
-    oneshot
-
-# start meta_tst for ATM
-on property:sys.boot_completed=1 && property:ro.boot.atm=enable
-    start meta_tst
-    start loghidlvendorservice
-    start loghidlsysservice
-
-
 #define VENDOR_EDIT
 # ye.zhang@BSP.Sensors.Feature, 2017/08/28, add for charging cmcc feature
 on property:ro.charging_current_limit=true

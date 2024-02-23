@@ -1,4 +1,4 @@
-# Android device tree for None None (CPH1979)
+# Android device tree for Oppo Reno Z (CPH1979)
 
 ```
 #
